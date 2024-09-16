@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #f4a261;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: dashed;
+    color: #e76f51;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar .logo h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar .logo span {
+    color: #f4a261;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden initially */
+    background-color: #00796b;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.sidebar .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 20px;
+    text-align: right;
+    display: block;
+}
+
+.sidebar.active {
+    left: 0; /* Slide into view */
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.service-section {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.service-icon {
+    width: 300px;
+    margin-bottom: 1px;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Show hamburger menu on smaller screens */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Hide regular nav links on smaller screens */
+    }
+
+    .navbar .menu-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+}
+
+/* Sidebar should not be visible on larger screens */
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+}
